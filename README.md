@@ -46,7 +46,7 @@ Ensure Prometheus UI is running at http://localhost:9090
 ````
 Ensure Pushgateway is running at ````http://localhost:9091````
 
-* Clone this repository
+## Clone this repository
 ````bash
 	git clone https://github.com/username/prometheus-pushgateway-python.git
 	cd prometheus-pushgateway-python
@@ -62,16 +62,13 @@ After copying the configuration, reload Prometheus:
 
 ### Execute Script
 
-* Run prometheus_recon.py with required options
-
-Usage: prometheus_recon.py [options]
-
-Options:\
--h, --help show this help message and exit\
--v, --verbose Print verbose info\
---suppress Suppress most connection related errors\
---swiftdir=SWIFTDIR Default = /etc/swift
-
+* Run prometheus_recon.py with required options\
+	Usage: prometheus_recon.py [options]\
+	Options:\
+	-h, --helpShow help message\
+	-v, --verbose Print verbose info\
+	--suppress Suppress most connection related errors\
+	--swiftdir=SWIFTDIR Default = /etc/swift
 ````bash
 	python3 prometheus_recon.py --swiftdir /etc/swift --verbose
 ````
