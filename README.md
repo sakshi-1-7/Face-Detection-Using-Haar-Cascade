@@ -10,6 +10,8 @@ jupyter notebook
 
 And the file should run. Tada!!
 
+
+
 # Prometheus Python Client with Pushgateway
 This repository demonstrates how to use the Prometheus Python client library to push metrics to a Prometheus Pushgateway and set up alerting rules in Prometheus.
 
@@ -19,8 +21,9 @@ Prometheus Pushgateway is used for pushing metrics from short-lived batch jobs. 
 2. Configuring Prometheus to alert based on the pushed metrics.
 
 ## Prerequisites
-i. Python 3.6 or later installed.
-ii. SAIO : [Configure Swift](https://docs.openstack.org/swift/latest/development_saio.html)
+1. Python 3.6 or later installed.
+2. SAIO : [Configure Swift](https://docs.openstack.org/swift/latest/development_saio.html)
+
 
 ## Quick Start Guide
 * Clone this repository
@@ -70,9 +73,3 @@ Options:
 Currently script pushes details for async, quarantined, replication/object from swift-recon
 
 With this repository, you can easily push metrics from Python applications to Prometheus Pushgateway and set up alerts in Prometheus. For issues or contributions, feel free to create a pull request or raise an issue. Happy Monitoring! 🎉
-
-
-````
-Currently script pushes details for async, quarantined, replication/object from swift-recon
-
-
