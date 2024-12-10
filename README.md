@@ -31,15 +31,6 @@ Prometheus Pushgateway is used for pushing metrics from short-lived batch jobs. 
 ````bash
 	pip install prometheus-client  
 ````
-* Set up Prometheus Pushgateway
-	Download and run Pushgateway
-````bash
-	wget https://github.com/prometheus/pushgateway/releases/download/v1.4.3/pushgateway-1.4.3.linux-amd64.tar.gz  
-	tar -xvf pushgateway-1.4.3.linux-amd64.tar.gz  
-	./pushgateway --web.listen-address=":9091"  
-````
-	Ensure the Pushgateway is running at http://localhost:9091.
-
 * Set up Promethueus
 	Download the latest release from [Prometheus Github](https://github.com/prometheus/prometheus/releases)
 ````bash
@@ -51,6 +42,16 @@ Acces Prometheus UI on
 ````bash
 http://localhost:9090
 ````
+
+* Set up Prometheus Pushgateway
+	Download and run Pushgateway
+````bash
+	wget https://github.com/prometheus/pushgateway/releases/download/v1.4.3/pushgateway-1.4.3.linux-amd64.tar.gz  
+	tar -xvf pushgateway-1.4.3.linux-amd64.tar.gz  
+	./pushgateway --web.listen-address=":9091"  
+````
+Ensure the Pushgateway is running at http://localhost:9091.
+
 
 ## Execute Script
 
@@ -67,4 +68,3 @@ Options:
 	python3 prometheus_recon.py --swiftdir /etc/swift --verbose
 ````
 Currently script pushes details for async, quarantined, replication/object from swift-recon
-
