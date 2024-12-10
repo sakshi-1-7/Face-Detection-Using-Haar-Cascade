@@ -24,41 +24,52 @@ Python 3.6 or later installed.\
 SAIO : [Configure Swift](https://docs.openstack.org/swift/latest/development_saio.html)
 
 ### Quick Start Guide
-* Install Dependencies
-Install the prometheus-client Python library using pip:
+* Set up Promethueus\
+	Download the latest release from [Prometheus Github](https://github.com/prometheus/prometheus/releases)
 ````bash
-pip install prometheus-client
+	tar -xvzf prometheus-*.tar.gz
 ````
-* Set up Promethueus
-Download the latest release from [Prometheus Github](https://github.com/prometheus/prometheus/releases)
 ````bash
-tar -xvzf prometheus-*.tar.gz
-cd prometheus-*
-./prometheus --config.file=prometheus.yml
+	cd prometheus-*
+````
+````bash
+	./prometheus --config.file=prometheus.yml --web.enable-lifecycle
 ````
 Ensure Prometheus UI is running at http://localhost:9090
 
-
-* Set up Prometheus Pushgateway
-Download the latest release from [Pushgateway](https://prometheus.io/download/)
+* Install the prometheus-client Python library using pip:
 ````bash
-tar -xvf pushgateway-1.4.3.linux-amd64.tar.gz
-./pushgateway --web.listen-address=":9091"
+	pip install prometheus-client
 ````
-Ensure Pushgateway is running at http://localhost:9091.
+
+* Set up Prometheus Pushgateway\
+	Download the latest release from [Pushgateway](https://prometheus.io/download/)
+````bash
+	tar -xvf pushgateway-1.4.3.linux-amd64.tar.gz
+````
+````bash
+	./pushgateway --web.listen-address=":9091"
+````
+Ensure Pushgateway is running at ````http://localhost:9091````
 
 * Clone this repository
 ````bash
-git clone https://github.com/your-username/prometheus-pushgateway-python.git
-cd prometheus-pushgateway-python
-cp prometheus.yml <your-prometheus-path>/prometheus.yml
-cp alerts.yml <your-prometheus-path>/alerts.yml
+	git clone https://github.com/username/prometheus-pushgateway-python.git
+````
+````bash
+	cd prometheus-pushgateway-python
+````
+````bash
+	cp prometheus.yml <your-prometheus-path>/prometheus.yml
+````
+````bash
+	cp alerts.yml <your-prometheus-path>/alerts.yml
 ````
 * Reload Prometheus Configuration
 
 After copying the configuration, reload Prometheus:
 ````bash
-curl -X POST http://localhost:9090/-/reload
+	curl -X POST http://localhost:9090/-/reload
 `````
 
 ### Execute Script
@@ -74,7 +85,7 @@ Options:\
 --swiftdir=SWIFTDIR Default = /etc/swift
 
 ````bash
-python3 prometheus_recon.py --swiftdir /etc/swift --verbose
+	python3 prometheus_recon.py --swiftdir /etc/swift --verbose
 ````
 Currently, the script pushes details for async, quarantined replication/object from swift-recon.
 
