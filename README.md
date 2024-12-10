@@ -39,9 +39,9 @@ Prometheus Pushgateway is used for pushing metrics from short-lived batch jobs. 
 * Getting Started
 	Set up Prometheus Pushgateway
 		Download and run Pushgateway
-		````bash
+````bash
 			wget https://github.com/prometheus/pushgateway/releases/download/v1.4.3/pushgateway-1.4.3.linux-amd64.tar.gz  
 			tar -xvf pushgateway-1.4.3.linux-amd64.tar.gz  
 			./pushgateway --web.listen-address=":9091"  
-		````
+````
 		Ensure the Pushgateway is running at http://localhost:9091.
