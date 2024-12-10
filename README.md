@@ -11,7 +11,6 @@ jupyter notebook
 And the file should run. Tada!!
 
 
-
 # Prometheus Python Client with Pushgateway
 This repository demonstrates how to use the Prometheus Python client library to push metrics to a Prometheus Pushgateway and set up alerting rules in Prometheus.
 
@@ -26,13 +25,7 @@ Prometheus Pushgateway is used for pushing metrics from short-lived batch jobs. 
 
 
 ## Quick Start Guide
-* Clone this repository
-```bash
-	git clone https://github.com/your-username/prometheus-pushgateway-python.git  
-	cd prometheus-pushgateway-python  
-````
 * Install Dependencies
-	Make sure you have Python 3.6 or later installed.
 	Install the premetheus-client Python library using pip:
 ````bash
 	pip install prometheus-client  
@@ -55,6 +48,13 @@ Ensure Prometheus UI is running at http://localhost:9090
 ````
 Ensure Pushgateway is running at http://localhost:9091.
 
+* Clone this repository
+```bash
+	git clone https://github.com/your-username/prometheus-pushgateway-python.git  
+	cd prometheus-pushgateway-python  
+	cp prometheus.yml <your-prometheus-path>/prometheus.yml
+	cp alerts.yml <your-prometheus-path>/alerts.yml
+````
 
 ## Execute Script
 
