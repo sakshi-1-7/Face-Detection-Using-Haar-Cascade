@@ -17,9 +17,9 @@ This repository demonstrates how to use the Prometheus Python client library to 
 ## Introduction
 Prometheus Pushgateway is used for pushing metrics from short-lived batch jobs. This repository focuses on:
 	
-1.Using the Prometheus Python client library for defining and pushing metrics.
+1. Using the Prometheus Python client library for defining and pushing metrics.
 
-2.Configuring Prometheus to alert based on the pushed metrics.
+2. Configuring Prometheus to alert based on the pushed metrics.
 
 
 ## Setup Instructions
@@ -42,4 +42,4 @@ Prometheus Pushgateway is used for pushing metrics from short-lived batch jobs. 
 	tar -xvf pushgateway-1.4.3.linux-amd64.tar.gz  
 	./pushgateway --web.listen-address=":9091"  
 ````
-		Ensure the Pushgateway is running at http://localhost:9091.
+Ensure the Pushgateway is running at http://localhost:9091.
