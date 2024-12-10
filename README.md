@@ -19,8 +19,8 @@ Prometheus Pushgateway is used for pushing metrics from short-lived batch jobs. 
 2. Configuring Prometheus to alert based on the pushed metrics.
 
 ## Prerequisites
-Python 3.6 or later installed.
-SAIO : [Configure Swift](https://docs.openstack.org/swift/latest/development_saio.html)
+i. Python 3.6 or later installed.
+ii. SAIO : [Configure Swift](https://docs.openstack.org/swift/latest/development_saio.html)
 
 ## Quick Start Guide
 * Clone this repository
