@@ -23,21 +23,21 @@ Prometheus Pushgateway is used for pushing metrics from short-lived batch jobs. 
 ## Setup Instructions
 * Clone this repository
 ```bash
-	git clone https://github.com/your-username/prometheus-pushgateway-python.git  
-	cd prometheus-pushgateway-python  
+git clone https://github.com/your-username/prometheus-pushgateway-python.git  
+cd prometheus-pushgateway-python  
 ````
 * Install Dependencies
 	Make sure you have Python 3.6 or later installed.
 	Install the premetheus-client Python library using pip:
 ````bash
-		pip install prometheus-client  
+pip install prometheus-client  
 ````
 * Getting Started
 	Set up Prometheus Pushgateway
 		Download and run Pushgateway
 ````bash
-			wget https://github.com/prometheus/pushgateway/releases/download/v1.4.3/pushgateway-1.4.3.linux-amd64.tar.gz  
-			tar -xvf pushgateway-1.4.3.linux-amd64.tar.gz  
-			./pushgateway --web.listen-address=":9091"  
+wget https://github.com/prometheus/pushgateway/releases/download/v1.4.3/pushgateway-1.4.3.linux-amd64.tar.gz  
+tar -xvf pushgateway-1.4.3.linux-amd64.tar.gz  
+./pushgateway --web.listen-address=":9091"  
 ````
 		Ensure the Pushgateway is running at http://localhost:9091.
