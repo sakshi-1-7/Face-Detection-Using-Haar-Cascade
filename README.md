@@ -10,7 +10,6 @@ jupyter notebook
 
 And the file should run. Tada!!
 
-
 # Prometheus Python Client with Pushgateway
 This repository demonstrates how to use the Prometheus Python client library to push metrics to a Prometheus Pushgateway and set up alerting rules in Prometheus.
 
@@ -32,15 +31,26 @@ Prometheus Pushgateway is used for pushing metrics from short-lived batch jobs. 
 ````bash
 	pip install prometheus-client  
 ````
-* Getting Started
-	Set up Prometheus Pushgateway
-		Download and run Pushgateway
+* Set up Prometheus Pushgateway
+	Download and run Pushgateway
 ````bash
 	wget https://github.com/prometheus/pushgateway/releases/download/v1.4.3/pushgateway-1.4.3.linux-amd64.tar.gz  
 	tar -xvf pushgateway-1.4.3.linux-amd64.tar.gz  
 	./pushgateway --web.listen-address=":9091"  
 ````
-Ensure the Pushgateway is running at http://localhost:9091.
+	Ensure the Pushgateway is running at http://localhost:9091.
+
+* Set up Promethueus
+	Download the latest release from [Prometheus Github](https://github.com/prometheus/prometheus/releases)
+````bash
+	tar -xvzf prometheus-*.tar.gz
+	cd prometheus-*
+	./prometheus --config.file=prometheus.yml
+````
+Acces Prometheus UI on 
+````bash
+http://localhost:9090
+````
 
 ## Execute Script
 
@@ -57,3 +67,4 @@ Options:
 	python3 prometheus_recon.py --swiftdir /etc/swift --verbose
 ````
 Currently script pushes details for async, quarantined, replication/object from swift-recon
+
