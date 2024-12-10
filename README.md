@@ -16,9 +16,7 @@ This repository demonstrates how to use the Prometheus Python client library to 
 
 ## Introduction
 Prometheus Pushgateway is used for pushing metrics from short-lived batch jobs. This repository focuses on:
-	
 1. Using the Prometheus Python client library for defining and pushing metrics.
-
 2. Configuring Prometheus to alert based on the pushed metrics.
 
 
@@ -43,3 +41,17 @@ Prometheus Pushgateway is used for pushing metrics from short-lived batch jobs. 
 	./pushgateway --web.listen-address=":9091"  
 ````
 Ensure the Pushgateway is running at http://localhost:9091.
+
+## About the prometheus_recon.py script
+
+Usage: prometheus_recon.py [options]
+Options:
+  -h, --help           show this help message and exit
+  -v, --verbose        Print verbose info
+  --suppress           Suppress most connection related errors
+  --swiftdir=SWIFTDIR  Default = /etc/swift
+
+````bash
+	python3 prometheus_recon.py --swiftdir /etc/swift --verbose
+````
+Currently script pushes details for async, quarantined, replication/object from swift-recon
