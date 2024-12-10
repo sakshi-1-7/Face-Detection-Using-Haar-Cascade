@@ -28,11 +28,7 @@ SAIO : [Configure Swift](https://docs.openstack.org/swift/latest/development_sai
 	Download the latest release from [Prometheus Github](https://github.com/prometheus/prometheus/releases)
 ````bash
 	tar -xvzf prometheus-*.tar.gz
-````
-````bash
 	cd prometheus-*
-````
-````bash
 	./prometheus --config.file=prometheus.yml --web.enable-lifecycle
 ````
 Ensure Prometheus UI is running at http://localhost:9090
@@ -46,8 +42,6 @@ Ensure Prometheus UI is running at http://localhost:9090
 	Download the latest release from [Pushgateway](https://prometheus.io/download/)
 ````bash
 	tar -xvf pushgateway-1.4.3.linux-amd64.tar.gz
-````
-````bash
 	./pushgateway --web.listen-address=":9091"
 ````
 Ensure Pushgateway is running at ````http://localhost:9091````
@@ -55,14 +49,8 @@ Ensure Pushgateway is running at ````http://localhost:9091````
 * Clone this repository
 ````bash
 	git clone https://github.com/username/prometheus-pushgateway-python.git
-````
-````bash
 	cd prometheus-pushgateway-python
-````
-````bash
 	cp prometheus.yml <your-prometheus-path>/prometheus.yml
-````
-````bash
 	cp alerts.yml <your-prometheus-path>/alerts.yml
 ````
 * Reload Prometheus Configuration
