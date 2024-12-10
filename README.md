@@ -42,14 +42,16 @@ Prometheus Pushgateway is used for pushing metrics from short-lived batch jobs. 
 ````
 Ensure the Pushgateway is running at http://localhost:9091.
 
-## About the prometheus_recon.py script
+## Execute Script
+
+* Run prometheus_recon.py with required options
 
 Usage: prometheus_recon.py [options]
 Options:
-  -h, --help           show this help message and exit
-  -v, --verbose        Print verbose info
-  --suppress           Suppress most connection related errors
-  --swiftdir=SWIFTDIR  Default = /etc/swift
+-h, --help           show this help message and exit
+-v, --verbose        Print verbose info
+--suppress           Suppress most connection related errors
+--swiftdir=SWIFTDIR  Default = /etc/swift
 
 ````bash
 	python3 prometheus_recon.py --swiftdir /etc/swift --verbose
